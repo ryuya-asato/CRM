@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 import {nl2br} from "@/common.js";
 
 defineProps({
@@ -46,7 +46,7 @@ defineProps({
                                         </div>
                                     </div>
                                     <div class="p-2 w-full">
-                                        <button @click="storeItem" class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Button</button>
+                                        <Link as="button" :href="route('items.edit', {item: item.id})" class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">編集する</Link>
                                     </div>
                                 </div>
                             </div>
